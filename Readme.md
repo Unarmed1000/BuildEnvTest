@@ -1,3 +1,5 @@
+# Environent issue
+
 Start command prompt (cmd.exe) then run BuildEnvTest.bat.
 16.4.6 works.
 16.5.0 + 16.5.1 produces the error log below.
@@ -7,13 +9,14 @@ The Doc/BuildEnv_16.5.1.txt contains a stripped version of the generated BuildEn
 
 Notice that the 16.4.6 environment dump contains the expected values that the visual studio build was launched with
 - path contains "c:\Work\EnvTest\Custom" (the path location where the EnvTest project was located as set by BuildEnvTest.bat)
-- the environment variable "MY_CUSTOM_ENVVARIABLE=hello" world is set.
+- the environment variable "MY_CUSTOM_ENVVARIABLE=hello world" is set.
 
 The 16.5.1 is missing these important environment changes which was carefully set by the build batch script.
 
 
-16.5.1 ERROR log
+## 16.5.1 ERROR log
 
+```bash
 **********************************************************************
 ** Visual Studio 2019 Developer Command Prompt v16.5.1
 ** Copyright (c) 2019 Microsoft Corporation
@@ -40,3 +43,4 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   operable program or batch file.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(
 231,5): error MSB6006: "cmd.exe" exited with code 1. [C:\Work\EnvTest\build\EnvTest.vcxproj]
+```

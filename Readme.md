@@ -1,4 +1,4 @@
-# Environent issue
+# Environment issue
 
 Start command prompt (cmd.exe) then run BuildEnvTest.bat.
 16.4.6 works.
